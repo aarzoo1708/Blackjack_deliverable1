@@ -6,23 +6,27 @@ package blackjack;
 
 /**
  *
- * @author User
+ * @author aarzoo
+ * date 09-10-23
  */
 public class Player {
     
     private String name;
     
-    private Card[] hand = new Card[10];
+    private Card[] hand = new Card[10]; // Player's hand, limited to 10 cards
     
     
-    private int valueOfCard;
-    
+    private int valueOfCard; // Number of cards in the player's hand
+
+    // Constructor to initialize the player with a name and an empty hand
+
     public Player(String name){
         this.name = name;
         
         this.emptyHand();
     }
     
+    // Clears the player's hand by setting all elements to null and resetting card count
     public void emptyHand(){
         for (int c = 0; c< 10 ; c++){
             this.hand[c]= null;
@@ -32,6 +36,8 @@ public class Player {
         
     }
     
+    // Adds a card to the player's hand
+    // Returns true if the player's hand sum is still <= 21, false otherwise
     public boolean addCard(Card addCard){
         
         if (this.valueOfCard == 10){
@@ -46,7 +52,8 @@ public class Player {
         
              
     }
-
+        // Calculates the sum of the values of the cards in the player's hand`
+    
         public int getHandSum(){
             int handSum = 0;
             int cardNum;

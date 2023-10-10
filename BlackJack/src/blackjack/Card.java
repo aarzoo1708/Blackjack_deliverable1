@@ -5,13 +5,22 @@
 package blackjack;
 
 /**
- *
- * @author User
+ * playing card with a suit and a value.
+ * The value of cards is defined as follows: Ace (1), Jack-King (11-13).
+ * This class provides methods to get the card's value, suit, and a string representation.
+ * @author aarzoo
+ * @date 09-10-23
  */
+
 public class Card {
     private Suit suit;
-    private int value; // value of the cards is where Ace:1, jack-King = 11-13
-
+    private int value; 
+    
+    /**
+     * @param suit The suit of the card (e.g., Hearts, Diamonds, etc.).
+     * @param value The value of the card (1 for Ace, 2-10, 11 for Jack, 12 for Queen, 13 for King).
+     */
+    
     public Card(Suit suit, int value ){
         this.suit = suit;
         
@@ -23,10 +32,19 @@ public class Card {
 
         }
     }
+    /**
+     * Gets the value of the card.
+     * @return The card's value.
+     */
     
     public int getValue(){
         return value;
     }
+    
+    /**
+     * Gets the suit of the card.
+     * @return The card's suit.
+     */
     
     public Suit getsuit(){
         return suit;
@@ -91,7 +109,12 @@ public class Card {
                 
                 
         }
-        return num + " of " + suit.toString();
+        return num + " of " + suit.toString(); 
+        
+     /**
+     * Generates a string representation of the card.
+     * @return A string in the format "Value of Suit" (e.g., "Ace of Hearts").
+     */
         }
         
         }
